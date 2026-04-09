@@ -32,3 +32,5 @@ Le service est configuré en interne. Pour y accéder depuis votre machine :
 1. **Port-forward** :
    ```bash
    kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+   kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d; echo

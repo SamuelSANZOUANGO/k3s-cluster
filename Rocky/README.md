@@ -25,3 +25,5 @@ Ce dépôt contient l'automatisation pour déployer un cluster Kubernetes léger
 - **ArgoCD Access** : Le service est en type `ClusterIP`. Pour y accéder depuis votre hôte :
   ```bash
   kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d; echo

@@ -48,3 +48,5 @@ Copiez le code d'installation dans un fichier nommé `install_k8s.sh` sur chaque
 Rendez le script exécutable avec la commande suivante :
 ```bash
 chmod +x install_k8s.sh
+
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d; echo
