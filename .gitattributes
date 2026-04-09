@@ -1,0 +1,8 @@
+# Enforce LF for all shell scripts
+*.sh text eol=lf
+
+# You can also add other text files if needed
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text
+*.py text eol=lf
